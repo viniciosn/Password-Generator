@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --primary: #eb5e28;
+  --black: #000000;
+  --white: #ffffff;
+  --dark: #313131;
+  --background: #252422; 
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body, main {
+  background-color: var(--background);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main h1 {
+  color: var(--white);
+  font-size: 36px;
+  text-align: center;
+}
+
+.container-input {
+  max-width: 480px;
+  margin: 14px 0;
+  text-align: center;
+}
+
+.container-input span {
+  color: var(--white);
+  font-size: 22px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 3px;
+  background: var(--white);
+  height: 16px;
+  outline: none;
+  margin-top: 8px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.button-cta {
+  height: 40px;
+  background-color: var(--primary);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 40px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.container-password {
+  max-width: 480px;
+  margin: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  color: var(--white);
+  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.password {
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--white);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--dark);
+  transition: transform 0.5s;
+}
+
+.password:hover {
+  transform: scale(1.05);
+}
+
+.tooltip {
+  color: var(--white);
+  position: relative;
+  top: 20px;
+  padding: 6px 8px;
+  background: var(--dark);
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+.container-password:hover .tooltip {
+  visibility: visible;
+  bottom: 50px;
+  opacity: 1;
+}
